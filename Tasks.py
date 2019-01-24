@@ -101,27 +101,62 @@
 
 
 
-# sock merchant failing case:
+# # sock merchant failing case:
+#
+# list = [44, 55, 11, 15, 4, 72, 26, 91, 80, 14, 43, 78, 70, 75, 36, 83, 78, 91, 17, 17, 54, 65, 60, 21, 58, 98, 87, 45, 75, 97, 81, 18, 51, 43, 84, 54, 66, 10, 44, 45, 23, 38, 22, 44, 65, 9, 78, 42, 100, 94, 58, 5, 11, 69, 26, 20, 19, 64, 64, 93, 60, 96, 10, 10, 39, 94, 15, 4, 3, 10, 1, 77, 48, 74, 20, 12, 83, 97, 5, 82, 43, 15, 86, 5, 35, 63, 24, 53, 27, 87, 45, 38, 34, 7, 48, 24, 100, 14, 80, 54]
+#
+#
+# def sockMerchant(ar):
+#     ar.sort()
+#     pairs = 0
+#
+#     while len(ar) != 1:
+#         try:
+#             if ar[0] == ar[1]:
+#                 pairs += 1
+#                 ar.pop(0)
+#                 ar.pop(0)
+#             else:
+#                 ar.pop(0)
+#         except IndexError:
+#             return pairs
+#
+#     return pairs
+#
+# print(sockMerchant(list))
 
-list = [44, 55, 11, 15, 4, 72, 26, 91, 80, 14, 43, 78, 70, 75, 36, 83, 78, 91, 17, 17, 54, 65, 60, 21, 58, 98, 87, 45, 75, 97, 81, 18, 51, 43, 84, 54, 66, 10, 44, 45, 23, 38, 22, 44, 65, 9, 78, 42, 100, 94, 58, 5, 11, 69, 26, 20, 19, 64, 64, 93, 60, 96, 10, 10, 39, 94, 15, 4, 3, 10, 1, 77, 48, 74, 20, 12, 83, 97, 5, 82, 43, 15, 86, 5, 35, 63, 24, 53, 27, 87, 45, 38, 34, 7, 48, 24, 100, 14, 80, 54]
+## valley counting
 
-
-def sockMerchant(ar):
-    ar.sort()
-    pairs = 0
-
-    while len(ar) != 1:
-        try:
-            if ar[0] == ar[1]:
-                pairs += 1
-                ar.pop(0)
-                ar.pop(0)
-            else:
-                ar.pop(0)
-        except IndexError:
-            return pairs
-
-    return pairs
-
-print(sockMerchant(list))
-
+# #!/bin/python3
+#
+# import math
+# import os
+# import random
+# import re
+# import sys
+#
+# # Complete the countingValleys function below.
+# def countingValleys(n, s):
+#     count = 0
+#     track = 0
+#     for i, c in enumerate(s):
+#         if c == 'U':
+#             track += 1
+#             if track == 0:
+#                 count+=1
+#         else:
+#             track -= 1
+#     return(count)
+#
+# if __name__ == '__main__':
+#     fptr = open(os.environ['OUTPUT_PATH'], 'w')
+#
+#     n = int(input())
+#
+#     s = input()
+#
+#     result = countingValleys(n, s)
+#
+#     fptr.write(str(result) + '\n')
+#
+#     fptr.close()
