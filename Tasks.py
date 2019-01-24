@@ -160,3 +160,7 @@
 #     fptr.write(str(result) + '\n')
 #
 #     fptr.close()
+
+s = 'asd'
+b = s.count('a')
+print(b)
